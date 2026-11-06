@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Khairgeldi Bekzat, Talapek Meyirzhan">
+    <meta name="description" content="Join BookVerse with JavaScript form validation">
+    <title>BookVerse - Contact</title>
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm px-3" aria-label="Main Navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-light" href="index.html">BookVerse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" 
+                        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" data-theme-toggle aria-pressed="false">Night mode</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4 py-lg-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <aside class="p-4 bg-white border rounded-3 shadow-sm h-100">
+                    <h2 class="h4 fw-bold mb-3">Contact Info</h2>
+                    <p class="text-muted mb-2">Have a book suggestion or a question about our collection?</p>
+                    <p class="text-muted mb-3">This is a sample contact form for our student project. A message delivery service is not connected.</p>
+                    <hr>
+                    <h3 class="h5 fw-bold">Assignment Info</h3>
+                    <p class="text-secondary small mb-1"><strong>Team:</strong> Hour</p>
+                    <p class="text-secondary small mb-1"><strong>Members:</strong> Khairgeldi Bekzat, Talapek Meyirzhan</p>
+                    <p class="text-secondary small mb-1"><strong>Group:</strong> SE-2503</p><p class="text-secondary small">Astana IT University</p>
+                </aside>
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <section class="card shadow-sm border-0 p-4 p-md-5">
+                    <h1 class="h3 fw-bold mb-3">Join BookVerse</h1>
+                    <p id="form-help" class="text-muted mb-4">Create your demo reader profile in three steps. Your entries stay in the form when you go back. No profile data is sent or saved.</p>
+
+                    <p id="step-status" class="fw-semibold" role="status">Step 1 of 3 - Your details</p>
+                    <div class="progress mb-4" role="progressbar" aria-label="Form progress" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><div id="form-progress" class="progress-bar"></div></div>
+                    <form id="contact-form" action="#" method="POST" aria-describedby="form-help" novalidate>
+                        <fieldset data-form-step>
+                            <legend class="h5" tabindex="-1">Your details</legend>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6"><label for="userName" class="form-label">Your Name</label><input type="text" class="form-control" id="userName" name="userName" autocomplete="name" maxlength="100" aria-describedby="name-error" required><p id="name-error" class="field-error" aria-live="polite"></p></div>
+                                <div class="col-12 col-md-6"><label for="userEmail" class="form-label">Email Address</label><input type="email" class="form-control" id="userEmail" name="userEmail" autocomplete="email" aria-describedby="email-error" required><p id="email-error" class="field-error" aria-live="polite"></p></div>
+                                <div class="col-12 col-md-6"><label for="userPassword" class="form-label">Password</label><input type="password" class="form-control" id="userPassword" name="userPassword" autocomplete="new-password" aria-describedby="password-help password-error" required><p id="password-help" class="form-text">Use 8 or more characters, including a letter and a number.</p><p id="password-error" class="field-error" aria-live="polite"></p></div>
+                                <div class="col-12 col-md-6"><label for="confirmPassword" class="form-label">Confirm Password</label><input type="password" class="form-control" id="confirmPassword" name="confirmPassword" autocomplete="new-password" aria-describedby="confirm-error" required><p id="confirm-error" class="field-error" aria-live="polite"></p></div>
+                            </div>
+                        </fieldset>
+                        <fieldset data-form-step hidden>
+                            <legend class="h5" tabindex="-1">Reading preferences</legend>
+                            <label for="category" class="form-label">Favorite Category</label><select id="category" name="category" class="form-select mb-3"><option value="classics">Classics</option><option value="science-fiction">Science Fiction</option><option value="fantasy">Fantasy</option><option value="educational">Educational</option></select>
+                            <label for="message" class="form-label">Your book suggestion or question</label><textarea id="message" name="message" class="form-control" rows="4" maxlength="2000" aria-describedby="message-error" required></textarea><p id="message-error" class="field-error" aria-live="polite"></p>
+                        </fieldset>
+                        <fieldset data-form-step hidden>
+                            <legend class="h5" tabindex="-1">Review your profile</legend>
+                            <dl id="profile-review" class="row my-3"></dl>
+                            <div class="form-check"><input id="termsCheck" name="termsCheck" class="form-check-input" type="checkbox" aria-describedby="terms-error" required><label for="termsCheck" class="form-check-label">I understand this is a sample form and no data will be sent.</label></div><p id="terms-error" class="field-error" aria-live="polite"></p>
+                        </fieldset>
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <button id="form-back" class="btn btn-outline-primary" type="button" hidden>Back</button>
+                            <button id="form-next" class="btn btn-primary" type="button">Next</button>
+                            <button id="form-submit" class="btn btn-success" type="submit" hidden>Finish profile</button>
+                            <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                        </div>
+                    </form>
+                    <div id="form-success" class="alert alert-success mt-4 mb-0" role="status" tabindex="-1" hidden>
+                        Form validated successfully. This demo did not send or save your data.
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light py-3 mt-auto">
+        <div class="container footer-content text-center">
+            <p class="mb-1">Team "Hour": Khairgeldi Bekzat, Talapek Meyirzhan | SE-2503</p>
+            <p class="current-datetime small mb-2">Loading current date and time...</p>
+            <button type="button" class="btn btn-sm btn-outline-light theme-button">Change background</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-sound-toggle aria-pressed="true">Sound: on</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-test-sound>Play sound</button>
+            <p class="small mb-0 mt-2" data-sound-status role="status"></p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

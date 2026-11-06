@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Khairgeldi Bekzat, Talapek Meyirzhan">
+    <meta name="description" content="BookVerse interactive library project with jQuery features for Assignment 6">
+    <title>BookVerse - Home</title>
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm px-3" aria-label="Main Navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-light" href="index.html">BookVerse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" 
+                        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" data-theme-toggle aria-pressed="false">Night mode</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4 py-lg-5 flex-grow-1">
+        <section class="home-hero row align-items-center mb-5 p-4 p-lg-5 rounded-4">
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0 px-sm-2">
+                <span class="home-label">Digital Library</span>
+                <h1 class="display-5 fw-bold text-primary mt-2">Welcome to BookVerse</h1>
+                <p class="lead text-secondary mt-lg-4">Your modern digital library for finding top-tier literature, classic masterpieces, and educational assets.</p>
+                
+                <div class="hero-actions d-flex flex-wrap gap-2 mt-3" role="group" aria-label="Quick Actions">
+                    <a href="catalog.html" class="btn btn-primary btn-lg">Browse Catalog</a>
+                    <a href="about.html" class="btn btn-outline-secondary btn-lg">Our Team</a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-lg-6">
+                <div class="hero-panel p-4 p-md-5 bg-white rounded-3 shadow-sm border">
+                    <h2 class="h4 fw-bold">Find Your Next Read</h2>
+                    <p class="text-muted">Explore curated titles for students and curious readers, or share a book suggestion with our team.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-success btn-sm" data-popup-open>Subscribe</button>
+                        <a href="about.html" class="btn btn-outline-dark btn-sm">Our Mission</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reader-welcome bg-white border rounded-3 p-4 mb-5" aria-labelledby="reader-greeting">
+            <h2 id="reader-greeting" class="h4">Welcome, reader!</h2>
+            <p class="text-muted">Give your next reading session a personal touch.</p>
+            <form id="greeting-form" class="d-flex flex-wrap gap-2">
+                <label for="reader-name" class="visually-hidden">Your name</label><input id="reader-name" class="form-control reader-name" type="text" placeholder="Your first name" maxlength="40" required>
+                <button class="btn btn-primary" type="submit">Update greeting</button>
+            </form>
+            <p id="greeting-message" class="small mt-2 mb-0" role="status"></p>
+        </section>
+        <section class="project-stats row g-3 mb-5" aria-label="BookVerse project statistics">
+            <div class="col-12 col-md-4">
+                <article class="stat-card h-100">
+                    <strong class="stat-number" data-counter="9">0</strong>
+                    <span>Books in the catalog</span>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="stat-card h-100">
+                    <strong class="stat-number" data-counter="4">0</strong>
+                    <span>Website pages</span>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="stat-card h-100">
+                    <strong class="stat-number" data-counter="2">0</strong>
+                    <span>Team members</span>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 fw-bold m-0">Popular Books</h2>
+                <a href="catalog.html" class="btn btn-outline-primary btn-sm">View All</a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="popular-card card h-100 border-0">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-1.svg" class="card-img-top p-3 bg-light" alt="The Great Gatsby cover" >
+                        <div class="card-body d-flex flex-column">
+                            <span class="book-type">Classic</span>
+                            <h3 class="card-title h5 fw-bold mt-2">The Great Gatsby</h3>
+                            <p class="card-text text-muted flex-grow-1">A classic portrait of ambition, love, and illusion during the Jazz Age in America.</p>
+                            <a href="catalog.html" class="btn btn-primary mt-3">Explore Catalog</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="popular-card card h-100 border-0">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-2.svg" class="card-img-top p-3 bg-light" alt="Dune cover" >
+                        <div class="card-body d-flex flex-column">
+                            <span class="book-type">Science Fiction</span>
+                            <h3 class="card-title h5 fw-bold mt-2">Dune</h3>
+                            <p class="card-text text-muted flex-grow-1">Frank Herbert's sci-fi epic revolving around interstellar power and planet Arrakis.</p>
+                            <a href="catalog.html" class="btn btn-primary mt-3">Explore Catalog</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="popular-card card h-100 border-0">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-3.svg" class="card-img-top p-3 bg-light" alt="1984 cover" >
+                        <div class="card-body d-flex flex-column">
+                            <span class="book-type">Dystopian Fiction</span>
+                            <h3 class="card-title h5 fw-bold mt-2">1984</h3>
+                            <p class="card-text text-muted flex-grow-1">A thought-provoking dystopian story exploring state control, media manipulation, and truth.</p>
+                            <a href="catalog.html" class="btn btn-primary mt-3">Explore Catalog</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="subscribe-popup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title" hidden>
+        <div class="popup-dialog">
+            <button type="button" class="popup-close" data-popup-close aria-label="Close subscription form">&times;</button>
+            <span class="home-label">BookVerse Updates</span>
+            <h2 id="popup-title" class="h3 fw-bold mt-2">Join our reading list</h2>
+            <p class="text-muted">Receive occasional recommendations from our student book collection.</p>
+            <form id="subscribe-form">
+                <label for="subscriber-name" class="form-label fw-semibold">Your name</label>
+                <input id="subscriber-name" class="form-control mb-3" type="text" autocomplete="name" required>
+                <label for="subscriber-email" class="form-label fw-semibold">Email address</label>
+                <input id="subscriber-email" class="form-control mb-3" type="email" autocomplete="email" required>
+                <button class="btn btn-primary w-100" type="submit">Subscribe</button>
+                <p id="subscribe-message" class="small mt-3 mb-0" role="status"></p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-3 mt-auto">
+        <div class="container footer-content text-center">
+            <p class="mb-1">Team "Hour": Khairgeldi Bekzat, Talapek Meyirzhan | SE-2503</p>
+            <p class="current-datetime small mb-2">Loading current date and time...</p>
+            <button type="button" class="btn btn-sm btn-outline-light theme-button">Change background</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-sound-toggle aria-pressed="true">Sound: on</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-test-sound>Play sound</button>
+            <p class="small mb-0 mt-2" data-sound-status role="status"></p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Khairgeldi Bekzat, Talapek Meyirzhan">
+    <meta name="description" content="Browse the interactive BookVerse book catalog">
+    <title>BookVerse - Catalog</title>
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm px-3" aria-label="Main Navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-light" href="index.html">BookVerse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" 
+                        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" data-theme-toggle aria-pressed="false">Night mode</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4 flex-grow-1">
+        <div class="text-center mb-4">
+            <h1 class="h2 fw-bold text-dark">Book Catalog & Carousel</h1>
+            <p class="text-muted">Explore featured titles using the interactive carousel or browse full categories.</p>
+        </div>
+
+        <section class="row justify-content-center mb-5">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div id="catalogCarousel" class="carousel slide carousel-dark shadow-sm rounded-3 overflow-hidden bg-white border" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Book 1"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="1" aria-label="Book 2"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="2" aria-label="Book 3"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="3" aria-label="Book 4"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="4" aria-label="Book 5"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="5" aria-label="Book 6"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="6" aria-label="Book 7"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="7" aria-label="Book 8"></button>
+                        <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="8" aria-label="Book 9"></button>
+                    </div>
+
+                    <div class="carousel-inner py-4">
+                        <div class="carousel-item active text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-1.svg" class="d-block mx-auto img-fluid"  alt="The Great Gatsby" loading="lazy">
+                            <h5 class="mt-3 fw-bold">1. The Great Gatsby</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-2.svg" class="d-block mx-auto img-fluid"  alt="Dune" loading="lazy">
+                            <h5 class="mt-3 fw-bold">2. Dune</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-3.svg" class="d-block mx-auto img-fluid"  alt="1984" loading="lazy">
+                            <h5 class="mt-3 fw-bold">3. 1984</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-4.svg" class="d-block mx-auto img-fluid"  alt="Clean Code" loading="lazy">
+                            <h5 class="mt-3 fw-bold">4. Clean Code</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-5.svg" class="d-block mx-auto img-fluid"  alt="The Hobbit" loading="lazy">
+                            <h5 class="mt-3 fw-bold">5. The Hobbit</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-6.svg" class="d-block mx-auto img-fluid"  alt="Sherlock Holmes" loading="lazy">
+                            <h5 class="mt-3 fw-bold">6. Sherlock Holmes</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-7.svg" class="d-block mx-auto img-fluid"  alt="Pride and Prejudice" loading="lazy">
+                            <h5 class="mt-3 fw-bold">7. Pride and Prejudice</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-8.svg" class="d-block mx-auto img-fluid"  alt="The Little Prince" loading="lazy">
+                            <h5 class="mt-3 fw-bold">8. The Little Prince</h5>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="img/book-9.svg" class="d-block mx-auto img-fluid"  alt="Fahrenheit 451" loading="lazy">
+                            <h5 class="mt-3 fw-bold">9. Fahrenheit 451</h5>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#catalogCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#catalogCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-4 catalog-books" aria-labelledby="collection-title">
+            <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center mb-3">
+                <div><span class="home-label">Make room for a new story</span><h2 id="collection-title" class="h3 fw-bold mt-1">Your next chapter starts here</h2></div>
+                <span id="reading-count" class="badge rounded-pill text-bg-primary px-3 py-2">Reading list: 0</span>
+            </div>
+            <div class="catalog-toolbar p-3 p-md-4 bg-white border rounded-3 mb-4">
+                <div class="row g-3 align-items-end">
+                    <div class="col-12 col-md-5 position-relative"><label for="book-search" class="form-label fw-semibold">Find a book</label><input id="book-search" class="form-control" type="search" placeholder="Search by title or author" maxlength="100" autocomplete="off" aria-controls="search-suggestions" aria-autocomplete="list"><div id="search-suggestions" class="search-suggestions" role="listbox" aria-label="Book suggestions" hidden></div></div>
+                    <div class="col-6 col-md-3"><label for="book-category" class="form-label fw-semibold">Category</label><select id="book-category" class="form-select"><option value="all">All categories</option><option value="classics">Classics</option><option value="science-fiction">Science fiction</option><option value="fantasy">Fantasy</option><option value="educational">Educational</option><option value="mystery">Mystery</option></select></div>
+                    <div class="col-6 col-md-4 d-flex flex-wrap gap-2"><button id="saved-filter" class="btn btn-outline-primary" type="button" aria-pressed="false">My reading list</button><button id="reset-filters" class="btn btn-outline-secondary" type="button">Reset</button></div>
+                </div>
+                <p id="category-description" class="text-muted small mt-3 mb-0">Explore all nine books in the BookVerse collection.</p>
+            </div>
+            <p id="catalog-count" class="fw-semibold" role="status"></p>
+            <p id="catalog-feedback" class="text-success small" role="status"></p>
+            <div id="book-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+            <div id="empty-catalog" class="bg-white border rounded-3 p-4 text-center" hidden><h3 class="h5">No books found</h3><p class="text-muted mb-0">Try another search or reset the filters to explore the collection.</p></div>
+            <noscript><p>Enable JavaScript to search, rate and save books in the interactive catalog.</p></noscript>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-3 mt-auto">
+        <div class="container footer-content text-center">
+            <p class="mb-1">Team "Hour": Khairgeldi Bekzat, Talapek Meyirzhan | SE-2503</p>
+            <p class="current-datetime small mb-2">Loading current date and time...</p>
+            <button type="button" class="btn btn-sm btn-outline-light theme-button">Change background</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-sound-toggle aria-pressed="true">Sound: on</button>
+            <button type="button" class="btn btn-sm btn-outline-light" data-test-sound>Play sound</button>
+            <p class="small mb-0 mt-2" data-sound-status role="status"></p>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>
